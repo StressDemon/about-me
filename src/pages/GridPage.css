@@ -1,0 +1,198 @@
+.grid-page-container {
+  width: 800px;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.grid-page-container > * {
+  transition: all 0.1s ease;
+  border-radius: 10px;
+  color: white;
+  padding: 1rem;
+  background-color: #22262b;
+  overflow: hidden;
+}
+
+.grid-page-container > *:hover {
+  scale: 1.02;
+}
+
+@keyframes top-slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.grid-page-container .who-am-i {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  padding: 2rem;
+  transform: translateY(-100%);
+  animation: top-slide-in 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.grid-page-container .who-am-i .question {
+  font-weight: 700;
+  color: var(--col-1);
+}
+
+.grid-page-container .who-am-i .answer {
+  font-weight: 400;
+}
+
+@keyframes right-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.grid-page-container .picture {
+  grid-row: 1 / 4;
+  grid-column: 3 / 4;
+  background-image: url("https://png.pngtree.com/background/20230616/original/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: translateX(100%);
+  animation: right-slide-in 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes left-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.grid-page-container .job {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  background-color: var(--col-1);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transform: translateX(-100%);
+  animation: left-slide-in 0.5s ease forwards;
+}
+
+@keyframes scale-up-down {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
+
+.grid-page-container .profile {
+  grid-row: 3 / 5;
+  grid-column: 2 / 3;
+  display: grid;
+  place-items: center;
+  animation: scale-up-down 0.5s ease;
+  animation-delay: 1.3s;
+}
+
+@keyframes switch-picture {
+  0% {
+    background-image: url("https://media.discordapp.net/attachments/1232761498170953749/1276119550277980201/IMG_0024.jpg?ex=66c85e71&is=66c70cf1&hm=cd5c4951bcb23acc0f264c777ee9cea11a211a1418cae28b528b75a2de80ea27&=&format=webp&width=380&height=676");
+  }
+  50% {
+    background-image: url("https://media.discordapp.net/attachments/1232761498170953749/1276119550277980201/IMG_0024.jpg?ex=66c85e71&is=66c70cf1&hm=cd5c4951bcb23acc0f264c777ee9cea11a211a1418cae28b528b75a2de80ea27&=&format=webp&width=380&height=676");
+  }
+  51% {
+    background-image: url("https://cdn.discordapp.com/attachments/1247663740506345535/1268387024755494952/IMG_0286.png?ex=66c7ec78&is=66c69af8&hm=28e363ef289dd2f268b2470f3682f78d7ef6404807706b2d94675c53ddd5a8a0&");
+  }
+  100% {
+    background-image: url("https://cdn.discordapp.com/attachments/1247663740506345535/1268387024755494952/IMG_0286.png?ex=66c7ec78&is=66c69af8&hm=28e363ef289dd2f268b2470f3682f78d7ef6404807706b2d94675c53ddd5a8a0&");
+  }
+}
+
+.grid-page-container .profile .profile-picture {
+  width: 35%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  animation: switch-picture 5s infinite;
+}
+
+.grid-page-container .profile .real-name {
+  font-size: 1.8rem;
+  color: var(--col-1);
+  font-weight: 700;
+}
+
+.grid-page-container .profile .username {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.grid-page-container .quote {
+  grid-row: 4 / 5;
+  grid-column: 3 / 4;
+  background-color: var(--col-1);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  transform: translateX(100%);
+  animation: right-slide-in 0.5s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.grid-page-container .tech {
+  grid-row: 4 / 8;
+  grid-column: 1 / 2;
+  padding: 1rem;
+  transform: translateY(100%);
+  animation: down-slide-in 0.5s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.grid-page-container .tech .icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-page-container .tech .icons > * {
+  width: 40px;
+}
+
+@keyframes down-slide-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.grid-page-container .education {
+  grid-row: 5 / 8;
+  grid-column: 2 / 4;
+  transform: translateY(100%);
+  animation: down-slide-in 0.5s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.grid-page-container .education h5 {
+  margin-top: 1rem;
+  color: var(--col-1);
+}

@@ -57,10 +57,21 @@
   }
 }
 
-.grid-page-container .picture {
+.grid-page-container a {
   grid-row: 1 / 4;
   grid-column: 3 / 4;
-  background-image: url("https://png.pngtree.com/background/20230616/original/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg");
+  padding: 0;
+  filter: grayscale(100%);
+}
+
+.grid-page-container a:hover {
+  filter: none;
+}
+
+.grid-page-container .picture {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.discordapp.com/attachments/1232761498170953749/1276598918083248280/image.png?ex=66ca1ce4&is=66c8cb64&hm=57cd93231a8ffa94d71192b1b576b76396ba16986eb661bbf6648f5e4081eaa7&");
   background-position: center;
   background-size: cover;
   transform: translateX(100%);

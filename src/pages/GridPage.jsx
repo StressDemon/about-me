@@ -17,7 +17,9 @@ function GridPage() {
           for a project for me to work on, feel free to contact me.
         </p>
       </div>
-      <div className="picture"></div>
+      <a href="https://github.com/StressDemon">
+        <div className="picture"></div>
+      </a>
       <div className="job">
         <p>Student and Frontend developer</p>
       </div>
